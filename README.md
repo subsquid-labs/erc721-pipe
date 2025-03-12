@@ -26,7 +26,7 @@ erc721-pipe/
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/subsquid-labs/erc721-pipe.git
 cd erc721-pipe
 
 # Install dependencies
@@ -40,10 +40,6 @@ The main example in `index.ts` shows how to use the ERC721Pipe to stream transfe
 ```bash
 # Run the development version with hot reload
 npm run dev
-
-# Or build and run the production version
-npm run build
-npm run start
 ```
 
 ## Usage Example
@@ -70,8 +66,7 @@ async function main() {
 
   // Process the stream of transfer events
   for await (const transfers of stream) {
-    console.log("FOUND", transfers);
-    // Each transfer has: from, to, tokenId, address properties
+    console.log(transfers);
   }
 }
 
